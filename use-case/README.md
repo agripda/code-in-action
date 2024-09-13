@@ -2,6 +2,7 @@
 This is a PoC of Code in Action with NextGenAI Workflows.
 
 ### File Structure
+```
 search_app/
 |-- app.py
 |-- models.py
@@ -11,7 +12,7 @@ search_app/
 |-- static/
     |-- style.css
 |-- requirements.txt
-
+```
 
 ### Running the Application
 Set up a virtual environment and install the required packages:
