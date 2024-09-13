@@ -25,3 +25,7 @@ Run the Flask application:
 python app.py
 
 Open your browser and go to http://127.0.0.1:5000 to see the search functionality in action.
+
+### Reference
+- Workflow: From-User-Story-to-Code-in-Action
+- Artifact: http://www.bdax.com.au/toto/use-case/ba-to-script/artifact-solution-design-to-script.html
