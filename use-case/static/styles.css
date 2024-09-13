@@ -1,0 +1,17 @@
+static/style.css
+Simple CSS to style the top-bar.
+
+.top-bar {
+    padding: 10px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+#searchField {
+    width: 200px;
+    padding: 5px;
+}
+
+#searchButton {
+    padding: 5px 10px;
+}

@@ -1,0 +1,46 @@
+<!-- templates/index.html
+A simple HTML page with a search field and button. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="top-bar">
+        <input type="text" id="searchField" placeholder="Where are you going?" maxlength="200">
+        <button id="searchButton">Search</button>
+    </div>
+    <div id="results"></div>
+
+    <script>
+        document.getElementById('searchButton').addEventListener('click', function() {
+            var query = document.getElementById('searchField').value;
+            fetch('/search', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({query: query})
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = '';
+                    data.results.forEach(result => {
+                        const resultElement = document.createElement('div');
+                        resultElement.textContent = `${result.name} - ${result.location}`;
+                        resultsDiv.appendChild(resultElement);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
