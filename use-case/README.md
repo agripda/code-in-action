@@ -1,4 +1,4 @@
-## NextGenAI Code-In-Action: Use Case
+## NextGenAI Use-Case: Code-In-Action
 ### File Structure
 search_app/
 |-- app.py
