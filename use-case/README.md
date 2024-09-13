@@ -1,4 +1,6 @@
 ## NextGenAI Use-Case: Code-In-Action
+This is a PoC of Code in Action with NextGenAI Workflows.
+
 ### File Structure
 search_app/
 |-- app.py
